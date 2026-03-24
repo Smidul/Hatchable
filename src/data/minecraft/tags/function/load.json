@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "egg_hatcher:load",
+        "egg_hatcher:schedule"
+    ]
+}

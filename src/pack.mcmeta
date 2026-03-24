@@ -1,0 +1,17 @@
+{
+	"pack": {
+		"pack_format": 71,
+		"supported_formats": {
+			"min_inclusive": 71,
+			"max_inclusive": 101
+		},
+		"description": [
+			{
+				"text": "Auto hatch eggs that are about to despawn",
+				"color": "gold"
+			}
+		],
+		"min_format": 71,
+		"max_format": 101
+	}
+}
