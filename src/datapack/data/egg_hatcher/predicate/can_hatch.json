@@ -1,0 +1,17 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "slots": {
+      "contents": {
+        "items": "#minecraft:eggs"
+      }
+    },
+    "stepping_on": {
+      "block": {
+        "blocks": "#egg_hatcher:hatcher_blocks"
+      }
+    },
+    "entity_type": "minecraft:item"
+  }
+}
