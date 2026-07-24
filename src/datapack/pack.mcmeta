@@ -1,30 +1,66 @@
 {
-	"pack": {
-		"pack_format": 110,
-		"min_format": 71,
-		"max_format": 110,
-		"supported_formats": {
-			"min_inclusive": 71,
-			"max_inclusive": 110
-		},
-		"description": [
-			{
-				"text": "Auto hatch eggs that are about to despawn",
-				"color": "gold"
-			}
-		]
-	},
-	"overlays": {
-		"entries": [
-			{
-				"min_format": 71,
-				"max_format": 102,
-				"formats": {
-					"min_inclusive": 71,
-					"max_inclusive": 102
-				},
-				"directory": "format_71"
-			}
-		]
-	}
+  "pack": {
+    "pack_format": 112,
+    "supported_formats": {
+      "min_inclusive": 48,
+      "max_inclusive": 112
+    },
+    "min_format": 48,
+    "max_format": 112,
+    "description": [
+      {
+        "text": "Auto-hatch eggs that are about to despawn.",
+        "color": "gold"
+      }
+    ]
+  },
+  "overlays": {
+    "entries": [
+      {
+        "directory": "overlay_48_61",
+        "formats": {
+          "min_inclusive": 48,
+          "max_inclusive": 61
+        },
+        "min_format": 48,
+        "max_format": 61
+      },
+      {
+        "directory": "overlay_62",
+        "formats": {
+          "min_inclusive": 62,
+          "max_inclusive": 62
+        },
+        "min_format": 62,
+        "max_format": 62
+      },
+      {
+        "directory": "overlay_48_70",
+        "formats": {
+          "min_inclusive": 48,
+          "max_inclusive": 70
+        },
+        "min_format": 48,
+        "max_format": 70
+      },
+      {
+        "directory": "overlay_48_102",
+        "formats": {
+          "min_inclusive": 48,
+          "max_inclusive": 102
+        },
+        "min_format": 48,
+        "max_format": 102
+      },
+      {
+        "directory": "overlay_103_110",
+        "formats": {
+          "min_inclusive": 103,
+          "max_inclusive": 110
+        },
+        "min_format": 103,
+        "max_format": 110
+      }
+    ]
+  }
 }

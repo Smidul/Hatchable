@@ -1,17 +1,17 @@
 {
-    "criteria": {
-        "trigger": {
-            "trigger": "minecraft:tick"
-        }
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": "Auto-hatch eggs that are about to despawn.",
+    "icon": {
+      "id": "minecraft:chicken_spawn_egg"
     },
-    "display": {
-        "announce_to_chat": false,
-        "description": "Auto hatch eggs that are about to despawn",
-        "icon": {
-            "id": "minecraft:chicken_spawn_egg"
-        },
-        "show_toast": false,
-        "title": "Egg Hatcher     "
-    },
-    "parent": "tweakidul:root"
+    "show_toast": false,
+    "title": "Egg Hatcher"
+  },
+  "parent": "tweakidul:root"
 }

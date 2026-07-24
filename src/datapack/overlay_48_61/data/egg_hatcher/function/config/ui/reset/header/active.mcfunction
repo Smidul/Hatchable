@@ -1,0 +1,1 @@
+$data modify storage egg_hatcher:temp ui.reset set value "{\"text\":\" [🔁]\",\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"$(reset_command)\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"$(reset_hover)\"}}"

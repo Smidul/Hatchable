@@ -4,7 +4,7 @@
   "predicate": {
     "slots": {
       "contents": {
-        "items": "#minecraft:eggs"
+        "items": "#egg_hatcher:eggs"
       }
     },
     "stepping_on": {
@@ -12,6 +12,6 @@
         "blocks": "#egg_hatcher:hatcher_blocks"
       }
     },
-    "type": "minecraft:item"
+    "entity_type": "minecraft:item"
   }
 }

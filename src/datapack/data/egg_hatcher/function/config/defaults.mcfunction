@@ -1,0 +1,31 @@
+# Page-grouped canonical configuration definitions.
+data modify storage egg_hatcher:definitions pages set value {feedback_sound:{feedback:{}}}
+data modify storage egg_hatcher:definitions translations set value {density:{},feedback:{}}
+data modify storage egg_hatcher:definitions groups set value {debug_categories:[]}
+data modify storage egg_hatcher:definitions pages.general set value [{path:"density.limit",default:50,type:"value",format:"number"},{path:"density.range",default:20,type:"value",format:"number"},{path:"chance",default:80,type:"value",format:"percent"},{path:"variants",default:{"minecraft:blue_egg":"minecraft:cold","minecraft:brown_egg":"minecraft:warm"},type:"object",format:"map"}]
+data modify storage egg_hatcher:definitions pages.debug set value [{path:"debug.receive_messages",default:0b,type:"boolean",per_player:1,player_tag:"egg_hatcher.debug"},{path:"debug.categories.tracking",default:1b,type:"boolean",per_player:1,player_tag:"egg_hatcher.debug.tracking.disabled",heading:"Categories",heading_source:"groups.debug_categories"},{path:"debug.categories.checks",default:1b,type:"boolean",per_player:1,player_tag:"egg_hatcher.debug.checks.disabled"},{path:"debug.categories.hatching",default:1b,type:"boolean",per_player:1,player_tag:"egg_hatcher.debug.hatching.disabled"},{path:"debug.categories.config",default:1b,type:"boolean",per_player:1,player_tag:"egg_hatcher.debug.config.disabled"}]
+data modify storage egg_hatcher:definitions groups.debug_categories set from storage egg_hatcher:definitions pages.debug
+data remove storage egg_hatcher:definitions groups.debug_categories[0]
+data modify storage egg_hatcher:definitions pages.feedback set value [{path:"feedback.hatch",type:"object",format:"feedback"}]
+data modify storage egg_hatcher:definitions pages.feedback_sound.feedback.hatch set value [{path:"feedback.hatch.sound.id",default:"minecraft:block.sniffer_egg.hatch",type:"value",format:"string"},{path:"feedback.hatch.sound.category",default:"neutral",type:"value",format:"string"},{path:"feedback.hatch.sound.volume",default:1.0f,type:"value",format:"number"},{path:"feedback.hatch.sound.pitch",default:1.5f,type:"value",format:"number"}]
+data modify storage egg_hatcher:definitions hidden set value [{path:"feedback.hatch.particles",default:1b},{path:"feedback.hatch.sound.enabled",default:1b}]
+data modify storage egg_hatcher:definitions translations.density.limit set value {name:"Density Limit",description:"{\"text\":\"Maximum number of entities from \",\"color\":\"gray\",\"extra\":[{\"text\":\"#egg_hatcher:density_entities\",\"color\":\"aqua\"},{\"text\":\" allowed within the density range.\",\"color\":\"gray\"}]}"}
+data modify storage egg_hatcher:definitions translations.density.range set value {name:"Density Range",description:"{\"text\":\"Block radius used to count entities from \",\"color\":\"gray\",\"extra\":[{\"text\":\"#egg_hatcher:density_entities\",\"color\":\"aqua\"},{\"text\":\" around an egg.\",\"color\":\"gray\"}]}"}
+data modify storage egg_hatcher:definitions translations.chance set value {name:"Hatch Chance",description:"{\"text\":\"Percentage chance for an eligible egg to hatch instead of disappearing.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.variants set value {name:"Variants",description:"{\"text\":\"Maps egg item IDs from \",\"color\":\"gray\",\"extra\":[{\"text\":\"#egg_hatcher:eggs\",\"color\":\"aqua\"},{\"text\":\" to chicken variant IDs. An egg's \",\"color\":\"gray\"},{\"text\":\"minecraft:chicken/variant\",\"color\":\"aqua\"},{\"text\":\" component overrides this map.\",\"color\":\"gray\"}]}"}
+data modify storage egg_hatcher:definitions translations.debug.receive_messages set value {name:"Receive Messages",description:"{\"text\":\"Toggle whether you receive debug messages.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.debug.categories.tracking set value {name:"Tracking",description:"{\"text\":\"Egg entity tracking events.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.debug.categories.checks set value {name:"Checks",description:"{\"text\":\"Age, density and chance check events.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.debug.categories.hatching set value {name:"Hatching",description:"{\"text\":\"Variant resolution and hatching events.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.debug.categories.config set value {name:"Config",description:"{\"text\":\"Configuration events.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.feedback.hatch set value {name:"Hatch",description:"{\"text\":\"Configure particles and sound when an egg hatches.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.feedback.hatch.sound set value {}
+data modify storage egg_hatcher:definitions translations.feedback.hatch.sound.id set value {name:"Sound ID",description:"{\"text\":\"Sound event played when an egg hatches.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.feedback.hatch.sound.category set value {name:"Category",description:"{\"text\":\"Sound source category used for volume controls.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.feedback.hatch.sound.volume set value {name:"Volume",description:"{\"text\":\"Playback volume for the hatch sound.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.feedback.hatch.sound.pitch set value {name:"Pitch",description:"{\"text\":\"Playback pitch for the hatch sound.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.feedback.hatch.particles set value {description:"{\"text\":\"Particles emitted when an egg hatches.\",\"color\":\"gray\"}"}
+data modify storage egg_hatcher:definitions translations.feedback.hatch.sound.enabled set value {description:"{\"text\":\"Sound played when an egg hatches.\",\"color\":\"gray\"}"}
+# Rebuild the default snapshot from the same definitions used by the UI and reset system.
+data modify storage egg_hatcher:defaults values set value {density:{},feedback:{hatch:{sound:{}}}}
+function egg_hatcher:config/iterate/all {operation:"build_defaults"}

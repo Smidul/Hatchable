@@ -1,0 +1,4 @@
+scoreboard players set #resetActive egg_hatcher.temp 0
+$function egg_hatcher:config/iterate {operation:"compare_all",source:"$(heading_source)"}
+$execute if score #resetActive egg_hatcher.temp matches 1.. run tellraw @s [{"text":""},{"text":"$(heading)","color":"gray"},{"text":" [🔁]","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/function egg_hatcher:config/reset_group {source:'$(heading_source)',return_function:'$(return_function)'}"},"hoverEvent":{"action":"show_text","contents":"Restore these settings to their defaults."}}]
+$execute unless score #resetActive egg_hatcher.temp matches 1.. run tellraw @s [{"text":""},{"text":"$(heading)","color":"gray"},{"text":" [🔁]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":"These settings already use their defaults."}}]

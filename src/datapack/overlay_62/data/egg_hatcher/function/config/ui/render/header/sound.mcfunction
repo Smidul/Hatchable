@@ -1,0 +1,1 @@
+$tellraw @s [{"text":""},{"text":"\n"},{"text":"[Egg Hatcher] ","color":"gold"},{"text":"\"","color":"yellow"},{"text":"$(title)","color":"green"},{"text":"\" Sound Settings ","color":"yellow"},{"text":"[Back]","color":"gray","click_event":{"action":"run_command","command":"$(back_command)"},"hover_event":{"action":"show_text","text":"$(back_hover)"}},$(reset)]
