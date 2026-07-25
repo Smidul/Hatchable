@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#hatchable:chicken/variant/cold",
+    "#hatchable:chicken/variant/temperate",
+    "#hatchable:chicken/variant/warm"
+  ]
+}

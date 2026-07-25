@@ -1,0 +1,4 @@
+scoreboard players set #resetActive hatchable.temp 0
+$function hatchable:config/iterate {operation:"compare_all",source:"$(heading_source)"}
+$execute if score #resetActive hatchable.temp matches 1.. run tellraw @s [{"text":""},{"text":"$(heading)","color":"gray"},{"text":" [🔁]","color":"dark_aqua","click_event":{"action":"run_command","command":"/function hatchable:config/reset_group {source:'$(heading_source)',return_function:'$(return_function)'}"},"hover_event":{"action":"show_text","text":{"text":"Restore these settings to their defaults.","color":"gray"}}}]
+$execute unless score #resetActive hatchable.temp matches 1.. run tellraw @s [{"text":""},{"text":"$(heading)","color":"gray"},{"text":" [🔁]","color":"dark_gray","hover_event":{"action":"show_text","text":{"text":"These settings already use their defaults.","color":"gray"}}}]

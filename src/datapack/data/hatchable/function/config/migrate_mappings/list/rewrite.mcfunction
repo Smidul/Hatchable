@@ -1,0 +1,7 @@
+execute if data storage hatchable:temp {migration:{value:"#egg_hatcher:hatchers"}} run data modify storage hatchable:temp migration.value set value "#hatchable:hatchers"
+execute if data storage hatchable:temp {migration:{value:"#egg_hatcher:hatcher_blocks"}} run data modify storage hatchable:temp migration.value set value "#hatchable:hatchers"
+execute if data storage hatchable:temp {migration:{value:"#egg_hatcher:eggs"}} run data modify storage hatchable:temp migration.value set value "#hatchable:eggs"
+execute if data storage hatchable:temp {migration:{value:"#egg_hatcher:chicken_eggs"}} run data modify storage hatchable:temp migration.value set value "#hatchable:chicken/eggs"
+execute if data storage hatchable:temp {migration:{value:"#egg_hatcher:cold_eggs"}} run data modify storage hatchable:temp migration.value set value "#hatchable:chicken/variant/cold"
+execute if data storage hatchable:temp {migration:{value:"#egg_hatcher:temperate_eggs"}} run data modify storage hatchable:temp migration.value set value "#hatchable:chicken/variant/temperate"
+execute if data storage hatchable:temp {migration:{value:"#egg_hatcher:warm_eggs"}} run data modify storage hatchable:temp migration.value set value "#hatchable:chicken/variant/warm"

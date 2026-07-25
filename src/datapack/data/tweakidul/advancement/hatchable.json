@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": "Hatches eggs or any configured item before they despawn.",
+    "icon": {
+      "id": "minecraft:chicken_spawn_egg"
+    },
+    "show_toast": false,
+    "title": "Hatchable"
+  },
+  "parent": "tweakidul:root"
+}

@@ -1,0 +1,1 @@
+$tellraw @s [{"text":""},{"text":"\n"},{"text":"[Hatchable] ","color":"gold"},{"text":"$(title)","color":"$(title_color)"},{"text":" "},{"text":"[Back]","color":"gray","clickEvent":{"action":"run_command","value":"$(back_command)"},"hoverEvent":{"action":"show_text","contents":{"text":"$(back_hover)","color":"gray"}}},$(reset)]

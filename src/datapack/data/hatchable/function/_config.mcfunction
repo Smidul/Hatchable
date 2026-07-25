@@ -1,0 +1,1 @@
+function hatchable:config/general

@@ -1,0 +1,1 @@
+$data modify storage hatchable:temp ui.entry.help set value "{\"text\":\"ℹ \",\"color\":\"$(help_color)\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function $(help_function)\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"§7Open detailed help.\"}}"

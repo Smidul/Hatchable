@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "hatchable:load"
+    "#hatchable:chicken/eggs"
   ]
 }

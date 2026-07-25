@@ -1,0 +1,1 @@
+$data modify storage hatchable:temp ui.reset set value "{\"text\":\" [🔁]\",\"color\":\"dark_gray\",\"hover_event\":{\"action\":\"show_text\",\"text\":{\"text\":\"$(reset_inactive_hover)\",\"color\":\"gray\"}}}"

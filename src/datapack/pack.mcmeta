@@ -9,7 +9,7 @@
     "max_format": 112,
     "description": [
       {
-        "text": "Auto-hatch eggs that are about to despawn.",
+        "text": "Hatches eggs or any configured item before they despawn.",
         "color": "gold"
       }
     ]
@@ -33,15 +33,6 @@
         },
         "min_format": 62,
         "max_format": 62
-      },
-      {
-        "directory": "overlay_48_70",
-        "formats": {
-          "min_inclusive": 48,
-          "max_inclusive": 70
-        },
-        "min_format": 48,
-        "max_format": 70
       },
       {
         "directory": "overlay_48_102",

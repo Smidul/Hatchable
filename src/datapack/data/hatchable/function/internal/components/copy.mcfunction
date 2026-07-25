@@ -1,0 +1,2 @@
+$execute if data entity @s Item.components."$(entity)/$(component)" run data modify storage hatchable:macro data.$(component) set from entity @s Item.components."$(entity)/$(component)"
+$execute unless data entity @s Item.components."$(entity)/$(component)" if data entity @s item.components."$(entity)/$(component)" run data modify storage hatchable:macro data.$(component) set from entity @s item.components."$(entity)/$(component)"
